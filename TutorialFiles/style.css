@@ -30,13 +30,12 @@ html, body {
 }
 .carousel-caption h1 {
     font-size: 500%; /* percentage of 1rem of 16, here is 5*16px*/
-    text-transform: uppercase;
-    text-shadow: 1px 1px 15px #000;
+    text-shadow: 1px 1px 25px #000;
 }
 .carousel-caption h3 {
     font-size: 200%;
     font-weight: 500;
-    text-shadow: 1px 1px 10px #000;
+    text-shadow: 1px 1px 20px #000;
     padding-bottom: 0.7rem;
 }
 .btn-primary { /*the get started button on first slide*/
