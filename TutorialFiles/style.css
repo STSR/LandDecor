@@ -78,13 +78,13 @@ html, body {
     color: #d5d5d5;
 }
 footer {
-    background-color: #3f3f3f;
+    background-color: #060606;
     color: #d5d5d5;
     padding-top: 2rem;
 }
 hr.light {
     border-top: 1px solid #d5d5d5;
-    width: 75%;
+    width: 85%;
     margin-top: .8rem;
     margin-bottom: 1rem;
 }
@@ -93,7 +93,7 @@ footer a {
 }
 hr.light-100 {
     border-top: 1px solid #d5d5d5;
-    width: 100%;
+    width: 75%;
     margin-top: .8rem;
     margin-bottom: 1rem;
 }
