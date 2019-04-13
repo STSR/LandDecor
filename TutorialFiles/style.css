@@ -11,9 +11,11 @@ html, body {
 .navbar { /* the dot before references the class in index*/
     padding: .8rem; /*1rem is root font size of 16px*/
 }
+
 .navbar-nav li {
     padding-right: 20px; /*can also do size this way, compared to 1.25rem*/
 }
+
 .nav-link {
     font-size: 1.1em !important; /*1em is the same as 1rem*/
 }
@@ -23,29 +25,35 @@ html, body {
     width: 100%;
     height: 100%;
 }
+
 .carousel-caption {
     position: absolute;
     top: 50%;
     transform: translateY(-50%); /*unknown as to why this was necessary*/
 }
-.carousel-caption h1 {
-    font-size: 500%; /* percentage of 1rem of 16, here is 5*16px*/
-    text-shadow: 1px 1px 25px #000;
-}
-.carousel-caption h3 {
-    font-size: 200%;
-    font-weight: 500;
-    text-shadow: 1px 1px 20px #000;
-    padding-bottom: 0.7rem;
-}
+
+    .carousel-caption h1 {
+        font-size: 500%; /* percentage of 1rem of 16, here is 5*16px*/
+        text-shadow: 1px 1px 25px #000;
+    }
+
+    .carousel-caption h3 {
+        font-size: 200%;
+        font-weight: 500;
+        text-shadow: 1px 1px 20px #000;
+        padding-bottom: 0.7rem;
+    }
+
 .btn-primary { /*the get started button on first slide*/
     background-color: #6648b1;
     border: 1px solid #6648b1;
 }
-.btn-primary:hover {
-    background-color: #563d7c;
-    border: 1px solid #563d7c;
-}
+
+    .btn-primary:hover {
+        background-color: #563d7c;
+        border: 1px solid #563d7c;
+    }
+
 .padding {
     padding-bottom: 2rem;
 }
@@ -55,6 +63,7 @@ html, body {
     width: 100%;
     height: 100%;
 }
+
 .gallery-inner img {
     width: 100%;
     height: 100%;
@@ -65,42 +74,52 @@ html, body {
     font-size: 4.5em;
     padding: 3rem;
 }
+
 .fa-facebook {
     color: #3b5998;
 }
+
 .fa-twitter {
     color: #00aced;
 }
+
 .fa-google-plus-g {
     color: #dd4b39;
 }
+
 .fa-instagram {
     color: #517fa4;
 }
+
 .fa-youtube {
     color: #bb0000;
 }
-.fa-facebook:hover,
-.fa-twitter:hover,
-.fa-google-plus-g:hover,
-.fa-instagram:hover,
-.fa-youtube:hover {
-    color: #d5d5d5;
-}
+
+    .fa-facebook:hover,
+    .fa-twitter:hover,
+    .fa-google-plus-g:hover,
+    .fa-instagram:hover,
+    .fa-youtube:hover {
+        color: #d5d5d5;
+    }
+
 footer {
     background-color: #060606;
     color: #d5d5d5;
     padding-top: 2rem;
 }
+
 hr.light {
     border-top: 1px solid #d5d5d5;
     width: 85%;
     margin-top: .8rem;
     margin-bottom: 1rem;
 }
+
 footer a {
     color: #d5d5d5;
 }
+
 hr.light-100 {
     border-top: 1px solid #d5d5d5;
     width: 75%;
@@ -115,44 +134,55 @@ hr.light-100 {
         padding: 2rem;
     }
 }
+
 @media (max-width: 768px) {
     .carousel-caption {
         top: 45%;
     }
-    .carousel-caption h1 {
-        font-size: 350%;
-    }
-    .carousel-caption h3 {
-        font-size: 140%;
-        font-weight: 400;
-        padding-bottom: 0.2rem;
-    }
-    .carousel-caption .btn {
-        font-size: 95%;
-        padding: 8px, 14px;
-    }
+
+        .carousel-caption h1 {
+            font-size: 350%;
+        }
+
+        .carousel-caption h3 {
+            font-size: 140%;
+            font-weight: 400;
+            padding-bottom: 0.2rem;
+        }
+
+        .carousel-caption .btn {
+            font-size: 95%;
+            padding: 8px, 14px;
+        }
+
     .social a {
         font-size: 2.5rem;
         padding: 1.2rem;
     }
 }
+
 @media (max-width: 576px) {
     .carousel-caption {
         top: 40%;
     }
-    .carousel-caption h1 {
-        font-size: 250%;
-    }
-    .carousel-caption h3 {
-        font-size: 110%;
-    }
-    .carousel-caption .btn {
-        font-size: 90%;
-        padding: 4px, 8px;
-    }
+
+        .carousel-caption h1 {
+            font-size: 250%;
+        }
+
+        .carousel-caption h3 {
+            font-size: 110%;
+        }
+
+        .carousel-caption .btn {
+            font-size: 90%;
+            padding: 4px, 8px;
+        }
+
     .carousel-indicators {
         display: none;
     }
+
     .social a {
         font-size: 2rem;
         padding: 0.7rem;
@@ -162,48 +192,61 @@ hr.light-100 {
 
 /*---Firefox Bug Fix --*/
 .carousel-item {
-  transition: -webkit-transform 0.5s ease;
-  transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-  -webkit-backface-visibility: visible;
-  backface-visibility: visible;
+    transition: -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
 }
 /*--- Fixed Background Image --*/
 figure {
-  position: relative;
-  width: 100%;
-  height: 60%;
-  margin: 0!important;
+    position: relative;
+    width: 100%;
+    height: 60%;
+    margin: 0 !important;
 }
+
 .fixed-wrap {
-  clip: rect(0, auto, auto, 0);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+    clip: rect(0, auto, auto, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
+
 #fixed {
-  background-image: url('img/mac.png');
-  position: fixed;
-  display: block;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center center;
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0);
-  will-change: transform;
+    background-image: url('img/mac.png');
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform;
 }
 /*--- Bootstrap Padding Fix --*/
 [class*="col-"] {
     padding: 1rem;
 }
 
-
-
+/*--- Sidebar --*/
+.sidebar {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    background-color: #FFFFFF;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 113px;
+}
+/*background-color: #111;*/
 
 
 /*
