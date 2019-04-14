@@ -43,34 +43,36 @@
     <!-- Gallery-->
     <div class="container-fluid padding">
         <div class="row text-left padding">
-            <div class="col-12">
-                <img class="gallery home" src="imgs/home1.JPG" alt="home1" style="width:20%;max-width:200px" onclick="pushFunction(this);" />
-                <img class="gallery home" src="imgs/home2.JPG" alt="home2" style="width:20%;max-width:200px" onclick="pushFunction(this);" />
-                <img class="gallery home" src="imgs/home3.JPG" alt="home3" style="width:20%;max-width:200px" onclick="pushFunction(this);" />
+            <h2 class="galsection gs-1">BBQ</h2>
+            <div id="bbq" class="col-12 bbq galcon">
             </div>
-            <div id="bbq" class="col-12 bbq">
-                <button class="btn btn-dark" onclick="populatebbq();">Populate</button>
+            <h2 class="galsection">Cabana</h2>
+            <div id="cabana" class="col-12 cabana galcon">
             </div>
-            <div class="col-12 cabana">
+            <h2 class="galsection">Driveways</h2>
+            <div id="driveways" class="col-12 driveways galcon">
             </div>
-            <div class="col-12 driveways">
+            <h2 class="galsection">Fence</h2>
+            <div id="fence" class="col-12 fence galcon">
             </div>
-            <div class="col-12 fence">
+            <h2 class="galsection">Fountain</h2>
+            <div id="fountain" class="col-12 fountain galcon">
             </div>
-            <div class="col-12 fountain">
+            <h2 class="galsection">Garden</h2>
+            <div id="garden" class="col-12 garden galcon">
             </div>
-            <div class="col-12 garden">
+            <h2 class="galsection">Patio</h2>
+            <div id="patio" class="col-12 patio galcon">
             </div>
-            <div class="col-12 patio">
-            </div>
-            <div class="col-12 pool">
+            <h2 class="galsection">Pool</h2>
+            <div id="pool" class="col-12 pool galcon">
             </div>
         </div>
     </div>
 
     <!--My Modal-->
-    <div id="galleryModal" class="modal">
-        <img class="modal-content" id="img01" onclick="popFunction();" />
+    <div id="galleryModal" class="modal" onclick="popFunction();">
+        <img class="modal-content centered" id="img01"/>
         <div id="caption"></div>
     </div>
 
@@ -90,38 +92,151 @@
         function popFunction() {
             modal.style.display = "none";
         }
-        var Photo = function (name, src) {
-            this.name = name;
-            this.src = src;
-        }
-        Photo.prototype.create = function () {
-            var container = document.getElementById('thumbs_container');
-            var img = document.createElement('img');
-            img.src = this.src;
-            img.alt = this.name;
-            img.className = 'thumb';
-            img.style.width = '200px';
-            container.appendChild(img);
-        };
         function populatebbq() {
             var container = document.getElementById('bbq');
             var i = 1;
             while (i < 4) {
                 var img = document.createElement('img');
-                //img.onload = function () {
-                    img.src = 'imgs/gallery/bbq/' + i + '.jpg';
-                    img.alt = "BBQ";
-                    img.className = 'gallery';
-                    img.style.width = '20%';
-                    img.style.maxWidth = '200px';
-                    container.appendChild(img);
-                //}
-                //img.onerror = function () {
-                //    break;
-                //}
+                img.src = 'imgs/gallery/bbq/' + i + '.jpg';
+                img.alt = "BBQ";
+                img.className = 'galpics';
+                img.style.maxWidth = '200px';
+                img.addEventListener('click', function () {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = imgs.alt;
+                });
+                container.appendChild(img);
                 i++;
             }
         }
+        function populatecabana() {
+            var container = document.getElementById('cabana');
+            var i = 1;
+            while (i < 11) {
+                var img = document.createElement('img');
+                img.src = 'imgs/gallery/cabana/' + i + '.jpg';
+                img.alt = "Cabana";
+                img.className = 'galpics';
+                img.style.maxWidth = '200px';
+                img.addEventListener('click', function () {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = imgs.alt;
+                });
+                container.appendChild(img);
+                i++;
+            }
+        }
+        function populatedriveways() {
+            var container = document.getElementById('driveways');
+            var i = 1;
+            while (i < 8) {
+                var img = document.createElement('img');
+                img.src = 'imgs/gallery/driveways/' + i + '.jpg';
+                img.alt = "Driveway";
+                img.className = 'galpics';
+                img.style.maxWidth = '200px';
+                img.addEventListener('click', function () {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = imgs.alt;
+                });
+                container.appendChild(img);
+                i++;
+            }
+        }
+        function populatefence() {
+            var container = document.getElementById('fence');
+            var i = 1;
+            while (i < 6) {
+                var img = document.createElement('img');
+                img.src = 'imgs/gallery/fence/' + i + '.jpg';
+                img.alt = "Fence";
+                img.className = 'galpics';
+                img.style.maxWidth = '200px';
+                img.addEventListener('click', function () {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = imgs.alt;
+                });
+                container.appendChild(img);
+                i++;
+            }
+        }
+        function populatefountain() {
+            var container = document.getElementById('fountain');
+            var i = 1;
+            while (i < 8) {
+                var img = document.createElement('img');
+                img.src = 'imgs/gallery/fountain/' + i + '.jpg';
+                img.alt = "Fountain";
+                img.className = 'galpics';
+                img.style.maxWidth = '200px';
+                img.addEventListener('click', function () {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = imgs.alt;
+                });
+                container.appendChild(img);
+                i++;
+            }
+        }
+        function populategarden() {
+            var container = document.getElementById('garden');
+            var i = 1;
+            while (i < 13) {
+                var img = document.createElement('img');
+                img.src = 'imgs/gallery/garden/' + i + '.jpg';
+                img.alt = "Garden";
+                img.className = 'galpics';
+                img.style.maxWidth = '200px';
+                img.addEventListener('click', function () {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = imgs.alt;
+                });
+                container.appendChild(img);
+                i++;
+            }
+        }
+        function populatepatio() {
+            var container = document.getElementById('patio');
+            var i = 1;
+            while (i < 11) {
+                var img = document.createElement('img');
+                img.src = 'imgs/gallery/patio/' + i + '.jpg';
+                img.alt = "Patio";
+                img.className = 'galpics';
+                img.style.maxWidth = '200px';
+                img.addEventListener('click', function () {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = imgs.alt;
+                });
+                container.appendChild(img);
+                i++;
+            }
+        }
+        function populatepool() {
+            var container = document.getElementById('pool');
+            var i = 1;
+            while (i < 15) {
+                var img = document.createElement('img');
+                img.src = 'imgs/gallery/pool/' + i + '.jpg';
+                img.alt = "Pool";
+                img.className = 'galpics';
+                img.style.maxWidth = '200px';
+                img.addEventListener('click', function () {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = imgs.alt;
+                });
+                container.appendChild(img);
+                i++;
+            }
+        }
+        window.onload = populatebbq(), populatecabana(), populatedriveways(), populatefence(), populatefountain(), populategarden(), populatepatio(), populatepool();
     </script>
     <!--- Footer -->
     <footer>
