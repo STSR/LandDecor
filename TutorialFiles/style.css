@@ -145,6 +145,24 @@ hr.light-100 {
     padding-top: 1rem;
 }
 
+/*--- Sidebar --*/
+.sidebar {
+    height: 100%;
+    width: 180px;
+    position: fixed;
+    z-index: 1;
+    /*background-color: #FFFFFF;*/
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 113px;
+    transition: 0.5s;
+}
+
+    .sidebar a:hover {
+        color: #f1f1f1;
+    }
+
 /*---Media Queries --*/
 @media (max-width: 1350px){
     .modal-content {
