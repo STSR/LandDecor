@@ -40,66 +40,85 @@
         </div>
     </nav>
 
-    <div class="container-fluid padding">
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <div class="col-1 padding">
-                <div class="btn-group-vertical">
-                    <button class="btn btn-light" type="button">
-                        Barbecues
-                    </button>
-                    <button class="btn btn-light" type="button">
-                        Cabanas
-                    </button>
-                    <button class="btn btn-light" type="button">
-                        Driveways
-                    </button>
-                    <button class="btn btn-light" type="button">
-                        Fences
-                    </button>
-                    <button class="btn btn-light" type="button">
-                        Fountains
-                    </button>
-                    <button class="btn btn-light" type="button">
-                        Gardens
-                    </button>
-                    <button class="btn btn-light" type="button">
-                        Patios
-                    </button>
-                    <button class="btn btn-light" type="button">
-                        Pools
-                    </button>
-                    <button class="btn btn-light" type="button">
-                        Renovations
-                    </button>
-                    <button class="btn btn-light" type="button">
-                        Retaining Walls
-                    </button>
-                    <button class="btn btn-light" type="button">
-                        Spas
-                    </button>
-                    <button class="btn btn-light" type="button">
-                        Stairs
-                    </button>
-                    <button class="btn btn-light" type="button">
-                        Stonework
-                    </button>
-                </div>
-            </div>
+    <!-- Image Filter -->
+    <div class="container-fluid">
+        <div class="col-1">
+            <button class="btn btn-light" data-toggle="collapse" data-target="#mySidebar">
+                &#9776; Image Filter
+            </button>
         </div>
-        <!-- Images -->
-        <div class="container-fluid padding">
-            <div class="row text-center padding">
-                <div class="col-11">
-                    <img class="gallery home item0" src="imgs/home1.JPG" alt="home1" style="width:20%;max-width:200px" onclick="pushFunction(this);" />
-                    <img class="gallery home item1" src="imgs/home2.JPG" alt="home2" style="width:20%;max-width:200px" onclick="pushFunction(this);" />
-                    <img class="gallery home item2" src="imgs/home3.JPG" alt="home3" style="width:20%;max-width:200px" onclick="pushFunction(this);" />
+        <!-- Sidebar -->
+        <div id="mySidebar" class="collapse">
+            <div class="sidebar">
+                <div class="container-fluid">
+                    <div class="col-1">
+                        <div class="btn-group-vertical">
+                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar">
+                                Barbecues
+                            </button>
+                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar">
+                                Cabanas
+                            </button>
+                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar">
+                                Driveways
+                            </button>
+                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar">
+                                Fences
+                            </button>
+                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar">
+                                Fountains
+                            </button>
+                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar">
+                                Gardens
+                            </button>
+                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar">
+                                Patios
+                            </button>
+                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar">
+                                Pools
+                            </button>
+                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar">
+                                Renovations
+                            </button>
+                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar">
+                                Retaining Walls
+                            </button>
+                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar">
+                                Spas
+                            </button>
+                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar">
+                                Stairs
+                            </button>
+                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar">
+                                Stonework
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-
+    <!-- Images -->
+    <div class="container-fluid padding">
+        <div class="row text-center padding">
+            <div class="col-1">
+            </div>
+            <div class="col-10">
+                <img class="gallery home item0" src="imgs/home1.JPG" alt="home1" style="width:20%;max-width:200px" onclick="pushFunction(this);" />
+                <img class="gallery home item1" src="imgs/home2.JPG" alt="home2" style="width:20%;max-width:200px" onclick="pushFunction(this);" />
+                <img class="gallery home item2" src="imgs/home3.JPG" alt="home3" style="width:20%;max-width:200px" onclick="pushFunction(this);" />
+                <img class="gallery home item0" src="imgs/home1.JPG" alt="home1" style="width:20%;max-width:200px" onclick="pushFunction(this);" />
+                <img class="gallery home item1" src="imgs/home2.JPG" alt="home2" style="width:20%;max-width:200px" onclick="pushFunction(this);" />
+                <img class="gallery home item2" src="imgs/home3.JPG" alt="home3" style="width:20%;max-width:200px" onclick="pushFunction(this);" />
+                <img class="gallery home item0" src="imgs/home1.JPG" alt="home1" style="width:20%;max-width:200px" onclick="pushFunction(this);" />
+                <img class="gallery home item1" src="imgs/home2.JPG" alt="home2" style="width:20%;max-width:200px" onclick="pushFunction(this);" />
+                <img class="gallery home item2" src="imgs/home3.JPG" alt="home3" style="width:20%;max-width:200px" onclick="pushFunction(this);" />
+            </div>
+            <div class="col-1">
+            </div>
+        </div>
+    </div>
 
     <!--My Modal-->
     <div id="galleryModal" class="modal">
@@ -126,7 +145,6 @@
         }
     </script>
 
-    <!-- The sidebar -->
     <!--- Footer -->
     <footer>
         <div class="container-fluid padding">
