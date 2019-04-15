@@ -53,43 +53,43 @@
                 <div class="container-fluid">
                     <div class="col-1">
                         <div class="btn-group-vertical">
-                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('bbq');">
+                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('bbq-t', 'bbq');">
                                 Barbecues
                             </button>
-                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('cabana')">
+                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('cabana-t', 'cabana');">
                                 Cabanas
                             </button>
-                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('driveways');">
+                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('driveways-t', 'driveways');">
                                 Driveways
                             </button>
-                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('fence');">
+                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('fence-t', 'fence');">
                                 Fences
                             </button>
-                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filtergal('fountain');">
+                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('fountain-t', 'fountain');">
                                 Fountains
                             </button>
-                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filtergal('garden');">
+                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('garden-t', 'garden');">
                                 Gardens
                             </button>
-                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filtergal('patio');">
+                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('patio-t', 'patio');">
                                 Patios
                             </button>
-                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filtergal('pool');">
+                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('pool-t', 'pool');">
                                 Pools
                             </button>
-                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filtergal('renovations');">
+                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('renovations-t', 'renovations');">
                                 Renovations
                             </button>
-                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filtergal('retainingwall');">
+                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('retainingwall-t', 'retainingwall');">
                                 Retaining Walls
                             </button>
-                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filtergal('spa');">
+                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('spa-t', 'spa');">
                                 Spas
                             </button>
-                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filtergal('stairs');">
+                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('stairs-t', 'stairs');">
                                 Stairs
                             </button>
-                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filtergal('stonework')">
+                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('stonework-t', 'stonework')">
                                 Stonework
                             </button>
                         </div>
@@ -102,29 +102,47 @@
     <!-- Gallery-->
     <div class="container-fluid padding">
         <div class="row text-left padding">
-            <h2 class="gal galsection gs-1 bbq">BBQs</h2>
-            <div id="bbq" class="gal col-12 gs-1 bbq galcon">
+            <h2 id="exampleWork-t" class="galsection bbq">Gallery Examples</h2>
+            <div id="exampleWork" class="col-12 galcon">
             </div>
-            <h2 class="gal galsection cabana">Cabanas</h2>
+            <h2 id="bbq-t" class="gal galsection bbq">BBQs</h2>
+            <div id="bbq" class="gal col-12 bbq galcon">
+            </div>
+            <h2 id="cabana-t" class="gal galsection cabana">Cabanas</h2>
             <div id="cabana" class="gal col-12 cabana galcon">
             </div>
-            <h2 class="gal galsection driveways">Driveways</h2>
+            <h2 id="driveways-t" class="gal galsection driveways">Driveways</h2>
             <div id="driveways" class="gal col-12 driveways galcon">
             </div>
-            <h2 class="gal galsection fence">Fences</h2>
+            <h2 id="fence-t" class="gal galsection fence">Fences</h2>
             <div id="fence" class="gal col-12 fence galcon">
             </div>
-            <h2 class="gal galsection fountain">Fountains</h2>
+            <h2 id="fountain-t" class="gal galsection fountain">Fountains</h2>
             <div id="fountain" class="gal col-12 fountain galcon">
             </div>
-            <h2 class="gal galsection garden">Gardens</h2>
+            <h2 id="garden-t" class="gal galsection garden">Gardens</h2>
             <div id="garden" class="gal col-12 garden galcon">
             </div>
-            <h2 class="gal galsection patio">Patios</h2>
+            <h2 id="patio-t" class="gal galsection patio">Patios</h2>
             <div id="patio" class="gal col-12 patio galcon">
             </div>
-            <h2 class="gal galsection pool">Pools</h2>
+            <h2 id="pool-t" class="gal galsection pool">Pools</h2>
             <div id="pool" class="gal col-12 pool galcon">
+            </div>
+            <h2 id="renovations-t" class="gal galsection renovations">Renovations</h2>
+            <div id="renovations" class="gal col-12 renovations galcon">
+            </div>
+            <h2 id="retainingwall-t" class="gal galsection retainingwall">Retaining Walls</h2>
+            <div id="retainingwall" class="gal col-12 retainingwall galcon">
+            </div>
+            <h2 id="spa-t" class="gal galsection spa">Spa</h2>
+            <div id="spa" class="gal col-12 spa galcon">
+            </div>
+            <h2 id="stairs-t" class="gal galsection stairs">Stairs</h2>
+            <div id="stairs" class="gal col-12 stairs galcon">
+            </div>
+            <h2 id="stonework-t" class="gal galsection stonework">Stonework</h2>
+            <div id="stonework" class="gal col-12 stonework galcon">
             </div>
         </div>
     </div>
@@ -140,7 +158,8 @@
         var modal = document.getElementById('galleryModal');
 
         //Set the first visible set to a var
-        var currentFilter = document.getElementsByClassName('gs-1');
+        currentTitle = 'exampleWork-t';
+        currentImages = 'exampleWork';
 
         // Get the image and insert it inside the modal - use its "alt" text as a caption
         var modalImg = document.getElementById("img01");
@@ -298,28 +317,132 @@
                 i++;
             }
         }
-        function filter(type) {
-            var x, y;
-            var newFilter = document.getElementsByClassName('gal');
-            /*for (y in currentFilter) {
-                newFilter.appendChild(currentFilter[y]);
-            }*/
-            for (x in newFilter) {
-                if (newFilter[x].className == type) {
-                    newFilter[x].style.display = "block";
-                } else {
-                    newFilter[x].style.display = "none";
-                }
+        function populaterenovations() {
+            var container = document.getElementById('renovations');
+            var i = 1;
+            while (i < 15) {
+                var img = document.createElement('img');
+                img.src = 'imgs/gallery/renovations/' + i + '.jpg';
+                img.alt = "Renovations";
+                img.className = 'galpics';
+                img.style.maxWidth = '200px';
+                img.addEventListener('click', function () {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = imgs.alt;
+                });
+                container.appendChild(img);
+                i++;
             }
         }
-        function filterin(type) {
-            var x, y;
-            var newFilter = document.getElementsByClassName(type);
-            for (y in currentFilter) {
-                newFilter.appendChild(currentFilter[y]);
+        function populateretainingwall() {
+            var container = document.getElementById('retainingwall');
+            var i = 1;
+            while (i < 12) {
+                var img = document.createElement('img');
+                img.src = 'imgs/gallery/retainingwall/' + i + '.jpg';
+                img.alt = "Retaining Wall";
+                img.className = 'galpics';
+                img.style.maxWidth = '200px';
+                img.addEventListener('click', function () {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = imgs.alt;
+                });
+                container.appendChild(img);
+                i++;
             }
-            for (x in newFilter) {
-                newFilter[x].style.display = "block";
+        }
+        function populatespa() {
+            var container = document.getElementById('spa');
+            var i = 1;
+            while (i < 5) {
+                var img = document.createElement('img');
+                img.src = 'imgs/gallery/spa/' + i + '.jpg';
+                img.alt = "Spa";
+                img.className = 'galpics';
+                img.style.maxWidth = '200px';
+                img.addEventListener('click', function () {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = imgs.alt;
+                });
+                container.appendChild(img);
+                i++;
+            }
+        }
+        function populatestairs() {
+            var container = document.getElementById('stairs');
+            var i = 1;
+            while (i < 5) {
+                var img = document.createElement('img');
+                img.src = 'imgs/gallery/stairs/' + i + '.jpg';
+                img.alt = "Stairs";
+                img.className = 'galpics';
+                img.style.maxWidth = '200px';
+                img.addEventListener('click', function () {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = imgs.alt;
+                });
+                container.appendChild(img);
+                i++;
+            }
+        }
+        function populatestonework() {
+            var container = document.getElementById('stonework');
+            var i = 1;
+            while (i < 4) {
+                var img = document.createElement('img');
+                img.src = 'imgs/gallery/stonework/' + i + '.jpg';
+                img.alt = "Stonework";
+                img.className = 'galpics';
+                img.style.maxWidth = '200px';
+                img.addEventListener('click', function () {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = imgs.alt;
+                });
+                container.appendChild(img);
+                i++;
+            }
+        }
+        function populateexampleWork() {
+            var container = document.getElementById('exampleWork');
+            var array = ['bbq', 'cabana', 'driveways', 'fence', 'fountain', 'garden', 'patio', 'pool', 'renovations', 'retainingwall', 'spa', 'stairs', 'stonework'];
+            for (i = 0; i < array.length; i++) {
+                var img = document.createElement('img');
+                img.src = 'imgs/gallery/' + array[i] + '/1.jpg';
+                img.alt = array[i];
+                img.className = 'galpics';
+                img.style.maxWidth = '200px';
+                img.addEventListener('click', function () {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = imgs.alt;
+                });
+                container.appendChild(img);
+                var img2 = document.createElement('img');
+                img2.src = 'imgs/gallery/' + array[i] + '/2.jpg';
+                img2.alt = array[i];
+                img2.className = 'galpics';
+                img2.style.maxWidth = '200px';
+                img2.addEventListener('click', function () {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = imgs.alt;
+                });
+                container.appendChild(img2);
+            }
+        }
+        function filter(title, images) {
+            if (currentTitle != title) {
+                document.getElementById(title).style.display = "block";
+                document.getElementById(images).style.display = "block";
+                document.getElementById(currentTitle).style.display = "none";
+                document.getElementById(currentImages).style.display = "none";
+                currentTitle = title;
+                currentImages = images;
             }
         }
         function filterout() {
@@ -330,7 +453,7 @@
             }
         }
 
-        window.onload = populatebbq(), populatecabana(), populatedriveways(), populatefence(), populatefountain(), populategarden(), populatepatio(), populatepool(), filterout();
+        window.onload = populatebbq(), populatecabana(), populatedriveways(), populatefence(), populatefountain(), populategarden(), populatepatio(), populatepool(), populaterenovations(), populateretainingwall(), populatespa(), populatestairs(), populatestonework(), populateexampleWork(), filterout();
     </script>
     <!--- Footer -->
     <footer>
