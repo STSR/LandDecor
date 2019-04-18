@@ -59,11 +59,17 @@
                             <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('cabana-t', 'cabana');">
                                 Cabanas
                             </button>
+                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('construction-t', 'construction')">
+                                Under Construction
+                            </button>
                             <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('driveways-t', 'driveways');">
                                 Driveways
                             </button>
                             <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('fence-t', 'fence');">
                                 Fences
+                            </button>
+                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('fire-t', 'fire')">
+                                Fire Features
                             </button>
                             <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('fountain-t', 'fountain');">
                                 Fountains
@@ -92,6 +98,9 @@
                             <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('stonework-t', 'stonework')">
                                 Stonework
                             </button>
+                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('team-t', 'team')">
+                                The Team
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -111,11 +120,17 @@
             <h2 id="cabana-t" class="gal galsection cabana">Cabanas</h2>
             <div id="cabana" class="gal col-12 cabana galcon">
             </div>
+            <h2 id="construction-t" class="gal galsection construction">Under Construction</h2>
+            <div id="construction" class="gal col-12 construction galcon">
+            </div>
             <h2 id="driveways-t" class="gal galsection driveways">Driveways</h2>
             <div id="driveways" class="gal col-12 driveways galcon">
             </div>
             <h2 id="fence-t" class="gal galsection fence">Fences</h2>
             <div id="fence" class="gal col-12 fence galcon">
+            </div>
+            <h2 id="fire-t" class="gal galsection fire">Fire Features</h2>
+            <div id="fire" class="gal col-12 fire galcon">
             </div>
             <h2 id="fountain-t" class="gal galsection fountain">Fountains</h2>
             <div id="fountain" class="gal col-12 fountain galcon">
@@ -143,6 +158,9 @@
             </div>
             <h2 id="stonework-t" class="gal galsection stonework">Stonework</h2>
             <div id="stonework" class="gal col-12 stonework galcon">
+            </div>
+            <h2 id="team-t" class="gal galsection team">The Team</h2>
+            <div id="team" class="gal col-12 team galcon">
             </div>
         </div>
     </div>
@@ -176,7 +194,7 @@
         function populatebbq() {
             var container = document.getElementById('bbq');
             var i = 1;
-            while (i < 4) {
+            while (i < 8) {
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/bbq/' + i + '.jpg';
                 img.alt = "BBQ";
@@ -194,7 +212,7 @@
         function populatecabana() {
             var container = document.getElementById('cabana');
             var i = 1;
-            while (i < 11) {
+            while (i < 9) {
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/cabana/' + i + '.jpg';
                 img.alt = "Cabana";
@@ -212,7 +230,7 @@
         function populatedriveways() {
             var container = document.getElementById('driveways');
             var i = 1;
-            while (i < 8) {
+            while (i < 10) {
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/driveways/' + i + '.jpg';
                 img.alt = "Driveway";
@@ -230,7 +248,7 @@
         function populatefence() {
             var container = document.getElementById('fence');
             var i = 1;
-            while (i < 6) {
+            while (i < 12) {
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/fence/' + i + '.jpg';
                 img.alt = "Fence";
@@ -248,7 +266,7 @@
         function populatefountain() {
             var container = document.getElementById('fountain');
             var i = 1;
-            while (i < 8) {
+            while (i < 7) {
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/fountain/' + i + '.jpg';
                 img.alt = "Fountain";
@@ -266,7 +284,7 @@
         function populategarden() {
             var container = document.getElementById('garden');
             var i = 1;
-            while (i < 13) {
+            while (i < 19) {
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/garden/' + i + '.jpg';
                 img.alt = "Garden";
@@ -284,7 +302,7 @@
         function populatepatio() {
             var container = document.getElementById('patio');
             var i = 1;
-            while (i < 11) {
+            while (i < 10) {
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/patio/' + i + '.jpg';
                 img.alt = "Patio";
@@ -302,7 +320,7 @@
         function populatepool() {
             var container = document.getElementById('pool');
             var i = 1;
-            while (i < 15) {
+            while (i < 31) {
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/pool/' + i + '.jpg';
                 img.alt = "Pool";
@@ -320,7 +338,7 @@
         function populaterenovations() {
             var container = document.getElementById('renovations');
             var i = 1;
-            while (i < 15) {
+            while (i < 17) {
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/renovations/' + i + '.jpg';
                 img.alt = "Renovations";
@@ -338,7 +356,7 @@
         function populateretainingwall() {
             var container = document.getElementById('retainingwall');
             var i = 1;
-            while (i < 12) {
+            while (i < 7) {
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/retainingwall/' + i + '.jpg';
                 img.alt = "Retaining Wall";
@@ -356,7 +374,7 @@
         function populatespa() {
             var container = document.getElementById('spa');
             var i = 1;
-            while (i < 5) {
+            while (i < 13) {
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/spa/' + i + '.jpg';
                 img.alt = "Spa";
@@ -374,7 +392,7 @@
         function populatestairs() {
             var container = document.getElementById('stairs');
             var i = 1;
-            while (i < 5) {
+            while (i < 7) {
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/stairs/' + i + '.jpg';
                 img.alt = "Stairs";
@@ -392,7 +410,7 @@
         function populatestonework() {
             var container = document.getElementById('stonework');
             var i = 1;
-            while (i < 4) {
+            while (i < 5) {
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/stonework/' + i + '.jpg';
                 img.alt = "Stonework";
@@ -407,9 +425,63 @@
                 i++;
             }
         }
+        function populateconstruction() {
+            var container = document.getElementById('construction');
+            var i = 1;
+            while (i < 51) {
+                var img = document.createElement('img');
+                img.src = 'imgs/gallery/construction/' + i + '.jpg';
+                img.alt = "Under Construction";
+                img.className = 'galpics';
+                img.style.maxWidth = '200px';
+                img.addEventListener('click', function () {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = imgs.alt;
+                });
+                container.appendChild(img);
+                i++;
+            }
+        }
+        function populatefire() {
+            var container = document.getElementById('fire');
+            var i = 1;
+            while (i < 7) {
+                var img = document.createElement('img');
+                img.src = 'imgs/gallery/fire/' + i + '.jpg';
+                img.alt = "Fire Features";
+                img.className = 'galpics';
+                img.style.maxWidth = '200px';
+                img.addEventListener('click', function () {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = imgs.alt;
+                });
+                container.appendChild(img);
+                i++;
+            }
+        }
+        function populateteam() {
+            var container = document.getElementById('team');
+            var i = 1;
+            while (i < 42) {
+                var img = document.createElement('img');
+                img.src = 'imgs/gallery/team/' + i + '.jpg';
+                img.alt = "The Team";
+                img.className = 'galpics';
+                img.style.maxWidth = '200px';
+                img.addEventListener('click', function () {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = imgs.alt;
+                });
+                container.appendChild(img);
+                i++;
+            }
+        }
         function populateexampleWork() {
             var container = document.getElementById('exampleWork');
-            var array = ['bbq', 'cabana', 'driveways', 'fence', 'fountain', 'garden', 'patio', 'pool', 'renovations', 'retainingwall', 'spa', 'stairs', 'stonework'];
+            var array = ['bbq', 'cabana', 'construction', 'driveways', 'fence', 'fire', 'fountain', 'garden', 'patio', 'pool', 'renovations', 'retainingwall', 'spa', 'stairs', 'stonework', 'team'];
             for (i = 0; i < array.length; i++) {
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/' + array[i] + '/1.jpg';
@@ -453,7 +525,7 @@
             }
         }
 
-        window.onload = populatebbq(), populatecabana(), populatedriveways(), populatefence(), populatefountain(), populategarden(), populatepatio(), populatepool(), populaterenovations(), populateretainingwall(), populatespa(), populatestairs(), populatestonework(), populateexampleWork(), filterout();
+        window.onload = populatebbq(), populatecabana(), populatedriveways(), populatefence(), populatefountain(), populategarden(), populatepatio(), populatepool(), populaterenovations(), populateretainingwall(), populatespa(), populatestairs(), populatestonework(), populateexampleWork(), populateteam(), populatefire(), populateconstruction(), filterout();
     </script>
     <!--- Footer -->
     <footer>
