@@ -236,6 +236,9 @@ hr.light-100 {
         font-size: 2rem;
         padding: 0.7rem;
     }
+    .modal {
+        background: none;
+    }
     .modal-content {
         display: none;
     }

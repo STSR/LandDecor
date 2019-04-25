@@ -165,11 +165,19 @@
 
     <!--My Modal-->
     <div id="galleryModal" class="modal" onclick="popFunction();">
-        <img class="modal-content centered" id="img01" />
+        <img class="modal-content centered" id="img01" data-index="null" />
+        <a class="carousel-control-prev" id="ccp" onclick="previousImage();">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" id="ccn" onclick="nextImage();">
+            <span class="carousel-control-next-icon"></span>
+        </a>
         <div id="caption"></div>
     </div>
 
     <script>
+
+        
         // Get the modal into a variable
         var modal = document.getElementById('galleryModal');
 
@@ -180,14 +188,22 @@
         // Get the image and insert it inside the modal - use its "alt" text as a caption
         var modalImg = document.getElementById("img01");
         var captionText = document.getElementById("caption");
-        function pushFunction(imgs) {
-            modal.style.display = "block";
-            modalImg.src = imgs.src;
-            captionText.innerHTML = imgs.alt;
-        }
+
         //clicking on blown up image closes modal
         function popFunction() {
             modal.style.display = "none";
+        }
+        function nextImage() {
+            // needs if to see if num is in bounds of category
+            indexNext = parseInt(modalImg.getAttribute('data-index'), 10) + 1;
+            var cat = modalImg.getAttribute('data-category');
+            modalImg.setAttribute('data-index', indexNext);
+            modalImg.src = "imgs/gallery/" + cat + "/" + indexNext + ".jpg";
+            //else if end of all categories
+            //else switch categories
+        }
+        function previousImage() {
+            //like above most likely
         }
         function populatebbq() {
             var container = document.getElementById('bbq');
@@ -196,10 +212,16 @@
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/bbq/' + i + '.jpg';
                 img.alt = "BBQ";
+                img.setAttribute('data-category', "bbq");
+                img.setAttribute('data-index', i);
                 img.className = 'galpics';
                 img.style.maxWidth = '200px';
                 img.addEventListener('click', function () {
+                    var index = this.getAttribute('data-index');
+                    var category = this.getAttribute('data-category');
                     modal.style.display = "block";
+                    modalImg.setAttribute("data-category", category);
+                    modalImg.setAttribute("data-index", index);
                     modalImg.src = this.src;
                     captionText.innerHTML = imgs.alt;
                 });
