@@ -164,8 +164,8 @@
     </div>
 
     <!--My Modal-->
-    <div id="galleryModal" class="modal" onclick="popFunction();">
-        <img class="modal-content centered" id="img01" data-index="null" />
+    <div id="galleryModal" class="modal">
+        <img class="modal-content centered" id="img01" onclick="popFunction();" />
         <a class="carousel-control-prev" id="ccp" onclick="previousImage();">
             <span class="carousel-control-prev-icon"></span>
         </a>
@@ -180,12 +180,13 @@
         
         // Get the modal into a variable
         var modal = document.getElementById('galleryModal');
+        var catbounds = [7, 8, 50, 9, 11, 6, 6, 18, 9, 30, 16, 6, 12, 6, 4, 41, 32]; //16l
+        var catnames = ["bbq", "cabana", "construction", "driveways", "fence", "fire", "fountain", "garden", "patio", "pool", "renovations", "retainingwall", "spa", "stairs", "stonework", "team", "exampleWork"];
 
         //Set the first visible set to a var
-        currentTitle = 'exampleWork-t';
-        currentImages = 'exampleWork';
+        var currentTitle = 'exampleWork-t';
+        var currentImages = 'exampleWork';
 
-        // Get the image and insert it inside the modal - use its "alt" text as a caption
         var modalImg = document.getElementById("img01");
         var captionText = document.getElementById("caption");
 
@@ -194,16 +195,37 @@
             modal.style.display = "none";
         }
         function nextImage() {
-            // needs if to see if num is in bounds of category
-            indexNext = parseInt(modalImg.getAttribute('data-index'), 10) + 1;
-            var cat = modalImg.getAttribute('data-category');
-            modalImg.setAttribute('data-index', indexNext);
-            modalImg.src = "imgs/gallery/" + cat + "/" + indexNext + ".jpg";
-            //else if end of all categories
-            //else switch categories
+            var indexNext = parseInt(modalImg.getAttribute('data-index'), 10) + 1;
+            var catNum = parseInt(modalImg.getAttribute('data-catNum'), 10);
+            var bounds = catbounds[catNum];
+            if (indexNext <= bounds) {
+                var name = catnames[catNum];
+                modalImg.setAttribute('data-index', indexNext);
+                modalImg.src = "imgs/gallery/" + name + "/" + indexNext + ".jpg";
+            }
+
+            //below are settings if looking at all cateogories
+
+            /*if (indexNext > bounds) {
+                indexNext = 1;
+                catNum += 1;
+                modalImg.setAttribute('data-catNum', catNum);
+                modalImg.setAttribute('data-index', indexNext);
+            }
+            if (catNum != 16) {
+                var name = catnames[catNum];
+                modalImg.setAttribute('data-index', indexNext);
+                modalImg.src = "imgs/gallery/" + name + "/" + indexNext + ".jpg";
+            }*/
         }
         function previousImage() {
-            //like above most likely
+            var indexPrevious = parseInt(modalImg.getAttribute('data-index'), 10) - 1;
+            var catNum = parseInt(modalImg.getAttribute('data-catNum'), 10);
+            if (indexPrevious >= 1) {
+                var name = catnames[catNum];
+                modalImg.setAttribute('data-index', indexPrevious);
+                modalImg.src = "imgs/gallery/" + name + "/" + indexPrevious + ".jpg";
+            }
         }
         function populatebbq() {
             var container = document.getElementById('bbq');
@@ -212,16 +234,16 @@
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/bbq/' + i + '.jpg';
                 img.alt = "BBQ";
-                img.setAttribute('data-category', "bbq");
                 img.setAttribute('data-index', i);
+                img.setAttribute('data-catNum', '0');
                 img.className = 'galpics';
                 img.style.maxWidth = '200px';
                 img.addEventListener('click', function () {
                     var index = this.getAttribute('data-index');
-                    var category = this.getAttribute('data-category');
+                    var catNum = this.getAttribute('data-catNum');
                     modal.style.display = "block";
-                    modalImg.setAttribute("data-category", category);
                     modalImg.setAttribute("data-index", index);
+                    modalImg.setAttribute("data-catNum", catNum);
                     modalImg.src = this.src;
                     captionText.innerHTML = imgs.alt;
                 });
@@ -236,10 +258,16 @@
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/cabana/' + i + '.jpg';
                 img.alt = "Cabana";
+                img.setAttribute('data-index', i);
+                img.setAttribute('data-catNum', '1');
                 img.className = 'galpics';
                 img.style.maxWidth = '200px';
                 img.addEventListener('click', function () {
+                    var index = this.getAttribute('data-index');
+                    var catNum = this.getAttribute('data-catNum');
                     modal.style.display = "block";
+                    modalImg.setAttribute("data-index", index);
+                    modalImg.setAttribute("data-catNum", catNum);
                     modalImg.src = this.src;
                     captionText.innerHTML = imgs.alt;
                 });
@@ -254,10 +282,16 @@
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/driveways/' + i + '.jpg';
                 img.alt = "Driveway";
+                img.setAttribute('data-index', i);
+                img.setAttribute('data-catNum', '3');
                 img.className = 'galpics';
                 img.style.maxWidth = '200px';
                 img.addEventListener('click', function () {
+                    var index = this.getAttribute('data-index');
+                    var catNum = this.getAttribute('data-catNum');
                     modal.style.display = "block";
+                    modalImg.setAttribute("data-index", index);
+                    modalImg.setAttribute("data-catNum", catNum);
                     modalImg.src = this.src;
                     captionText.innerHTML = imgs.alt;
                 });
@@ -272,10 +306,16 @@
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/fence/' + i + '.jpg';
                 img.alt = "Fence";
+                img.setAttribute('data-index', i);
+                img.setAttribute('data-catNum', '4');
                 img.className = 'galpics';
                 img.style.maxWidth = '200px';
                 img.addEventListener('click', function () {
+                    var index = this.getAttribute('data-index');
+                    var catNum = this.getAttribute('data-catNum');
                     modal.style.display = "block";
+                    modalImg.setAttribute("data-index", index);
+                    modalImg.setAttribute("data-catNum", catNum);
                     modalImg.src = this.src;
                     captionText.innerHTML = imgs.alt;
                 });
@@ -290,10 +330,16 @@
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/fountain/' + i + '.jpg';
                 img.alt = "Fountain";
+                img.setAttribute('data-index', i);
+                img.setAttribute('data-catNum', '6');
                 img.className = 'galpics';
                 img.style.maxWidth = '200px';
                 img.addEventListener('click', function () {
+                    var index = this.getAttribute('data-index');
+                    var catNum = this.getAttribute('data-catNum');
                     modal.style.display = "block";
+                    modalImg.setAttribute("data-index", index);
+                    modalImg.setAttribute("data-catNum", catNum);
                     modalImg.src = this.src;
                     captionText.innerHTML = imgs.alt;
                 });
@@ -308,10 +354,16 @@
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/garden/' + i + '.jpg';
                 img.alt = "Garden";
+                img.setAttribute('data-index', i);
+                img.setAttribute('data-catNum', '7');
                 img.className = 'galpics';
                 img.style.maxWidth = '200px';
                 img.addEventListener('click', function () {
+                    var index = this.getAttribute('data-index');
+                    var catNum = this.getAttribute('data-catNum');
                     modal.style.display = "block";
+                    modalImg.setAttribute("data-index", index);
+                    modalImg.setAttribute("data-catNum", catNum);
                     modalImg.src = this.src;
                     captionText.innerHTML = imgs.alt;
                 });
@@ -326,10 +378,16 @@
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/patio/' + i + '.jpg';
                 img.alt = "Patio";
+                img.setAttribute('data-index', i);
+                img.setAttribute('data-catNum', '8');
                 img.className = 'galpics';
                 img.style.maxWidth = '200px';
                 img.addEventListener('click', function () {
+                    var index = this.getAttribute('data-index');
+                    var catNum = this.getAttribute('data-catNum');
                     modal.style.display = "block";
+                    modalImg.setAttribute("data-index", index);
+                    modalImg.setAttribute("data-catNum", catNum);
                     modalImg.src = this.src;
                     captionText.innerHTML = imgs.alt;
                 });
@@ -344,10 +402,16 @@
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/pool/' + i + '.jpg';
                 img.alt = "Pool";
+                img.setAttribute('data-index', i);
+                img.setAttribute('data-catNum', '9');
                 img.className = 'galpics';
                 img.style.maxWidth = '200px';
                 img.addEventListener('click', function () {
+                    var index = this.getAttribute('data-index');
+                    var catNum = this.getAttribute('data-catNum');
                     modal.style.display = "block";
+                    modalImg.setAttribute("data-index", index);
+                    modalImg.setAttribute("data-catNum", catNum);
                     modalImg.src = this.src;
                     captionText.innerHTML = imgs.alt;
                 });
@@ -362,10 +426,16 @@
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/renovations/' + i + '.jpg';
                 img.alt = "Renovations";
+                img.setAttribute('data-index', i);
+                img.setAttribute('data-catNum', '10');
                 img.className = 'galpics';
                 img.style.maxWidth = '200px';
                 img.addEventListener('click', function () {
+                    var index = this.getAttribute('data-index');
+                    var catNum = this.getAttribute('data-catNum');
                     modal.style.display = "block";
+                    modalImg.setAttribute("data-index", index);
+                    modalImg.setAttribute("data-catNum", catNum);
                     modalImg.src = this.src;
                     captionText.innerHTML = imgs.alt;
                 });
@@ -380,10 +450,16 @@
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/retainingwall/' + i + '.jpg';
                 img.alt = "Retaining Wall";
+                img.setAttribute('data-index', i);
+                img.setAttribute('data-catNum', '11');
                 img.className = 'galpics';
                 img.style.maxWidth = '200px';
                 img.addEventListener('click', function () {
+                    var index = this.getAttribute('data-index');
+                    var catNum = this.getAttribute('data-catNum');
                     modal.style.display = "block";
+                    modalImg.setAttribute("data-index", index);
+                    modalImg.setAttribute("data-catNum", catNum);
                     modalImg.src = this.src;
                     captionText.innerHTML = imgs.alt;
                 });
@@ -398,10 +474,16 @@
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/spa/' + i + '.jpg';
                 img.alt = "Spa";
+                img.setAttribute('data-index', i);
+                img.setAttribute('data-catNum', '12');
                 img.className = 'galpics';
                 img.style.maxWidth = '200px';
                 img.addEventListener('click', function () {
+                    var index = this.getAttribute('data-index');
+                    var catNum = this.getAttribute('data-catNum');
                     modal.style.display = "block";
+                    modalImg.setAttribute("data-index", index);
+                    modalImg.setAttribute("data-catNum", catNum);
                     modalImg.src = this.src;
                     captionText.innerHTML = imgs.alt;
                 });
@@ -416,10 +498,16 @@
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/stairs/' + i + '.jpg';
                 img.alt = "Stairs";
+                img.setAttribute('data-index', i);
+                img.setAttribute('data-catNum', '13');
                 img.className = 'galpics';
                 img.style.maxWidth = '200px';
                 img.addEventListener('click', function () {
+                    var index = this.getAttribute('data-index');
+                    var catNum = this.getAttribute('data-catNum');
                     modal.style.display = "block";
+                    modalImg.setAttribute("data-index", index);
+                    modalImg.setAttribute("data-catNum", catNum);
                     modalImg.src = this.src;
                     captionText.innerHTML = imgs.alt;
                 });
@@ -434,10 +522,16 @@
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/stonework/' + i + '.jpg';
                 img.alt = "Stonework";
+                img.setAttribute('data-index', i);
+                img.setAttribute('data-catNum', '14');
                 img.className = 'galpics';
                 img.style.maxWidth = '200px';
                 img.addEventListener('click', function () {
+                    var index = this.getAttribute('data-index');
+                    var catNum = this.getAttribute('data-catNum');
                     modal.style.display = "block";
+                    modalImg.setAttribute("data-index", index);
+                    modalImg.setAttribute("data-catNum", catNum);
                     modalImg.src = this.src;
                     captionText.innerHTML = imgs.alt;
                 });
@@ -452,10 +546,16 @@
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/construction/' + i + '.jpg';
                 img.alt = "Under Construction";
+                img.setAttribute('data-index', i);
+                img.setAttribute('data-catNum', '2');
                 img.className = 'galpics';
                 img.style.maxWidth = '200px';
                 img.addEventListener('click', function () {
+                    var index = this.getAttribute('data-index');
+                    var catNum = this.getAttribute('data-catNum');
                     modal.style.display = "block";
+                    modalImg.setAttribute("data-index", index);
+                    modalImg.setAttribute("data-catNum", catNum);
                     modalImg.src = this.src;
                     captionText.innerHTML = imgs.alt;
                 });
@@ -470,10 +570,16 @@
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/fire/' + i + '.jpg';
                 img.alt = "Fire Features";
+                img.setAttribute('data-index', i);
+                img.setAttribute('data-catNum', '5');
                 img.className = 'galpics';
                 img.style.maxWidth = '200px';
                 img.addEventListener('click', function () {
+                    var index = this.getAttribute('data-index');
+                    var catNum = this.getAttribute('data-catNum');
                     modal.style.display = "block";
+                    modalImg.setAttribute("data-index", index);
+                    modalImg.setAttribute("data-catNum", catNum);
                     modalImg.src = this.src;
                     captionText.innerHTML = imgs.alt;
                 });
@@ -488,10 +594,16 @@
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/team/' + i + '.jpg';
                 img.alt = "The Team";
+                img.setAttribute('data-index', i);
+                img.setAttribute('data-catNum', '15');
                 img.className = 'galpics';
                 img.style.maxWidth = '200px';
                 img.addEventListener('click', function () {
+                    var index = this.getAttribute('data-index');
+                    var catNum = this.getAttribute('data-catNum');
                     modal.style.display = "block";
+                    modalImg.setAttribute("data-index", index);
+                    modalImg.setAttribute("data-catNum", catNum);
                     modalImg.src = this.src;
                     captionText.innerHTML = imgs.alt;
                 });
@@ -501,30 +613,26 @@
         }
         function populateexampleWork() {
             var container = document.getElementById('exampleWork');
-            var array = ['bbq', 'cabana', 'construction', 'driveways', 'fence', 'fire', 'fountain', 'garden', 'patio', 'pool', 'renovations', 'retainingwall', 'spa', 'stairs', 'stonework', 'team'];
-            for (i = 0; i < array.length; i++) {
+            var i = 1;
+            while (i < 33) {
                 var img = document.createElement('img');
-                img.src = 'imgs/gallery/' + array[i] + '/1.jpg';
-                img.alt = array[i];
+                img.src = 'imgs/gallery/exampleWork/' + i + '.jpg';
+                img.alt = "Gallery Examples";
+                img.setAttribute('data-index', i);
+                img.setAttribute('data-catNum', '16');
                 img.className = 'galpics';
                 img.style.maxWidth = '200px';
                 img.addEventListener('click', function () {
+                    var index = this.getAttribute('data-index');
+                    var catNum = this.getAttribute('data-catNum');
                     modal.style.display = "block";
+                    modalImg.setAttribute("data-index", index);
+                    modalImg.setAttribute("data-catNum", catNum);
                     modalImg.src = this.src;
                     captionText.innerHTML = imgs.alt;
                 });
                 container.appendChild(img);
-                var img2 = document.createElement('img');
-                img2.src = 'imgs/gallery/' + array[i] + '/2.jpg';
-                img2.alt = array[i];
-                img2.className = 'galpics';
-                img2.style.maxWidth = '200px';
-                img2.addEventListener('click', function () {
-                    modal.style.display = "block";
-                    modalImg.src = this.src;
-                    captionText.innerHTML = imgs.alt;
-                });
-                container.appendChild(img2);
+                i++;
             }
         }
         function filter(title, images) {
