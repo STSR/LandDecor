@@ -194,6 +194,20 @@
         function popFunction() {
             modal.style.display = "none";
         }
+        document.onkeydown = function(event) {
+            switch (event.keyCode) {
+                case 37:
+                    if (modal.style.display == "block") {
+                        previousImage();
+                    }
+                    break;
+                case 39:
+                    if (modal.style.display == "block") {
+                        nextImage();
+                    }
+                    break;
+            }
+        }
         function nextImage() {
             var indexNext = parseInt(modalImg.getAttribute('data-index'), 10) + 1;
             var catNum = parseInt(modalImg.getAttribute('data-catNum'), 10);
