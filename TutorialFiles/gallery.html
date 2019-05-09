@@ -59,7 +59,7 @@
             </button>
         </div>
         <!-- Sidebar -->
-        <div class="sidebar" id="mySidebar">
+        <div class="sidebar" id="mySidebar" onclick="popSidebar();">
             <div class="container-fluid">
                 <div class="col-1">
                     <div class="btn-group-vertical">
@@ -213,6 +213,9 @@
 
         function pushSidebar() {
             sidebar.style.display = "block";
+        }
+        function popSidebar() {
+            sidebar.style.display = "none";
         }
         function popFunction() {
             modal.style.display = "none";
