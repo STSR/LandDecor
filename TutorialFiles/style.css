@@ -151,6 +151,16 @@ hr.light-100 {
 .carousel-control-prev {
     width: 18%;
 }
+.closewindow {
+    width: 100%;
+    height: 100%;
+    padding-left: 18%;
+    padding-right: 18%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
 
 /*--- Sidebar --*/
 .sidebar {
@@ -181,6 +191,10 @@ hr.light-100 {
     }
     .carousel-control-prev {
         width: 15%;
+    }
+    .closewindow {
+        padding-left: 15%;
+        padding-right: 15%;
     }
 }
 

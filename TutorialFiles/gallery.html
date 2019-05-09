@@ -60,6 +60,9 @@
                             <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('construction-t', 'construction')">
                                 Under Construction
                             </button>
+                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('decks-t', 'decks')">
+                                Decks
+                            </button>
                             <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('driveways-t', 'driveways');">
                                 Driveways
                             </button>
@@ -121,6 +124,9 @@
             <h2 id="construction-t" class="gal galsection construction">Under Construction</h2>
             <div id="construction" class="gal col-12 construction galcon">
             </div>
+            <h2 id="decks-t" class="gal galsection decks">Decks</h2>
+            <div id="decks" class="gal col-12 decks galcon">
+            </div>
             <h2 id="driveways-t" class="gal galsection driveways">Driveways</h2>
             <div id="driveways" class="gal col-12 driveways galcon">
             </div>
@@ -165,7 +171,8 @@
 
     <!--My Modal-->
     <div id="galleryModal" class="modal">
-        <img class="modal-content centered" id="img01" onclick="popFunction();" />
+        <div class="closewindow" onclick="popFunction();"></div>
+        <img class="modal-content centered" id="img01" onclick="popFunction();" /> 
         <a class="carousel-control-prev" id="ccp" onclick="previousImage();">
             <span class="carousel-control-prev-icon"></span>
         </a>
@@ -180,8 +187,8 @@
         
         // Get the modal into a variable
         var modal = document.getElementById('galleryModal');
-        var catbounds = [7, 8, 50, 9, 11, 6, 6, 18, 9, 30, 16, 6, 12, 6, 4, 41, 32]; //16l
-        var catnames = ["bbq", "cabana", "construction", "driveways", "fence", "fire", "fountain", "garden", "patio", "pool", "renovations", "retainingwall", "spa", "stairs", "stonework", "team", "exampleWork"];
+        var catbounds = [7, 8, 50, 0, 9, 11, 6, 6, 18, 9, 30, 16, 6, 12, 6, 4, 41, 32]; //16l
+        var catnames = ["bbq", "cabana", "construction", "decks", "driveways", "fence", "fire", "fountain", "garden", "patio", "pool", "renovations", "retainingwall", "spa", "stairs", "stonework", "team", "exampleWork"];
 
         //Set the first visible set to a var
         var currentTitle = 'exampleWork-t';
@@ -274,6 +281,30 @@
                 img.alt = "Cabana";
                 img.setAttribute('data-index', i);
                 img.setAttribute('data-catNum', '1');
+                img.className = 'galpics';
+                img.style.maxWidth = '200px';
+                img.addEventListener('click', function () {
+                    var index = this.getAttribute('data-index');
+                    var catNum = this.getAttribute('data-catNum');
+                    modal.style.display = "block";
+                    modalImg.setAttribute("data-index", index);
+                    modalImg.setAttribute("data-catNum", catNum);
+                    modalImg.src = this.src;
+                    captionText.innerHTML = imgs.alt;
+                });
+                container.appendChild(img);
+                i++;
+            }
+        }
+        function populatedecks() {
+            var container = document.getElementById('decks');
+            var i = 1;
+            while (i < 1) { //needs number of deck images
+                var img = document.createElement('img');
+                img.src = 'imgs/gallery/decks/' + i + '.jpg';
+                img.alt = "Decks";
+                img.setAttribute('data-index', i);
+                img.setAttribute('data-catNum', '2');
                 img.className = 'galpics';
                 img.style.maxWidth = '200px';
                 img.addEventListener('click', function () {
@@ -667,7 +698,7 @@
             }
         }
 
-        window.onload = populatebbq(), populatecabana(), populatedriveways(), populatefence(), populatefountain(), populategarden(), populatepatio(), populatepool(), populaterenovations(), populateretainingwall(), populatespa(), populatestairs(), populatestonework(), populateexampleWork(), populateteam(), populatefire(), populateconstruction(), filterout();
+        window.onload = populatebbq(), populatecabana(), populatedriveways(), populatefence(), populatefountain(), populategarden(), populatepatio(), populatepool(), populaterenovations(), populateretainingwall(), populatespa(), populatestairs(), populatestonework(), populateexampleWork(), populateteam(), populatefire(), populateconstruction(), populatedecks(), filterout();
     </script>
 <!--- Footer -->
     <footer>
