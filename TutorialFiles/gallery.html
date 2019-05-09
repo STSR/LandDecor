@@ -39,76 +39,87 @@
     </nav>
 
     <!-- Image Filter -->
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+            &#9776; Image Filter
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a onclick="filter('bbq-t', 'bbq');">Barbecues</a></li>
+            <li><a onclick="filter('cabana-t', 'cabana');">Cabanas</a></li>
+            <li><a href="#">Under Construction</a></li>
+        </ul>
+    </div>
+
+    <!-- Filter Button -->
     <div class="container-fluid">
         <div class="col-1">
-            <button class="btn btn-light" data-toggle="collapse" data-target="#mySidebar">
+            <button class="btn btn-light" onclick="pushSidebar();">
                 &#9776; Image Filter
             </button>
         </div>
         <!-- Sidebar -->
-        <div id="mySidebar" class="collapse">
-            <div class="sidebar">
-                <div class="container-fluid">
-                    <div class="col-1">
-                        <div class="btn-group-vertical">
-                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('bbq-t', 'bbq');">
-                                Barbecues
-                            </button>
-                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('cabana-t', 'cabana');">
-                                Cabanas
-                            </button>
-                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('construction-t', 'construction')">
-                                Under Construction
-                            </button>
-                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('decks-t', 'decks')">
-                                Decks
-                            </button>
-                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('driveways-t', 'driveways');">
-                                Driveways
-                            </button>
-                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('fence-t', 'fence');">
-                                Fences
-                            </button>
-                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('fire-t', 'fire')">
-                                Fire Features
-                            </button>
-                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('fountain-t', 'fountain');">
-                                Fountains
-                            </button>
-                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('garden-t', 'garden');">
-                                Gardens
-                            </button>
-                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('patio-t', 'patio');">
-                                Patios
-                            </button>
-                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('pool-t', 'pool');">
-                                Pools
-                            </button>
-                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('renovations-t', 'renovations');">
-                                Renovations
-                            </button>
-                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('retainingwall-t', 'retainingwall');">
-                                Retaining Walls
-                            </button>
-                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('spa-t', 'spa');">
-                                Spas
-                            </button>
-                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('stairs-t', 'stairs');">
-                                Stairs
-                            </button>
-                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('stonework-t', 'stonework')">
-                                Stonework
-                            </button>
-                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#mySidebar" onclick="filter('team-t', 'team')">
-                                The Team
-                            </button>
-                        </div>
+        <div class="sidebar" id="mySidebar">
+            <div class="container-fluid">
+                <div class="col-1">
+                    <div class="btn-group-vertical">
+                        <button class="btn btn-light" type="button" onclick="filter('bbq-t', 'bbq');">
+                            Barbecues
+                        </button>
+                        <button class="btn btn-light" type="button"onclick="filter('cabana-t', 'cabana');">
+                            Cabanas
+                        </button>
+                        <button class="btn btn-light" type="button" onclick="filter('construction-t', 'construction')">
+                            Under Construction
+                        </button>
+                        <button class="btn btn-light" type="button" onclick="filter('decks-t', 'decks')">
+                            Decks
+                        </button>
+                        <button class="btn btn-light" type="button" onclick="filter('driveways-t', 'driveways');">
+                            Driveways
+                        </button>
+                        <button class="btn btn-light" type="button" onclick="filter('fence-t', 'fence');">
+                            Fences
+                        </button>
+                        <button class="btn btn-light" type="button" onclick="filter('fire-t', 'fire')">
+                            Fire Features
+                        </button>
+                        <button class="btn btn-light" type="button" onclick="filter('fountain-t', 'fountain');">
+                            Fountains
+                        </button>
+                        <button class="btn btn-light" type="button" onclick="filter('garden-t', 'garden');">
+                            Gardens
+                        </button>
+                        <button class="btn btn-light" type="button" onclick="filter('patio-t', 'patio');">
+                            Patios
+                        </button>
+                        <button class="btn btn-light" type="button" onclick="filter('pool-t', 'pool');">
+                            Pools
+                        </button>
+                        <button class="btn btn-light" type="button" onclick="filter('renovations-t', 'renovations');">
+                            Renovations
+                        </button>
+                        <button class="btn btn-light" type="button" onclick="filter('retainingwall-t', 'retainingwall');">
+                            Retaining Walls
+                        </button>
+                        <button class="btn btn-light" type="button" onclick="filter('spa-t', 'spa');">
+                            Spas
+                        </button>
+                        <button class="btn btn-light" type="button" onclick="filter('stairs-t', 'stairs');">
+                            Stairs
+                        </button>
+                        <button class="btn btn-light" type="button" onclick="filter('stonework-t', 'stonework')">
+                            Stonework
+                        </button>
+                        <button class="btn btn-light" type="button" onclick="filter('team-t', 'team')">
+                            The Team
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
+    
     <!-- Gallery-->
     <div class="container-fluid padding">
         <div class="row text-left padding">
@@ -172,7 +183,7 @@
     <!--My Modal-->
     <div id="galleryModal" class="modal">
         <div class="closewindow" onclick="popFunction();"></div>
-        <img class="modal-content centered" id="img01" onclick="popFunction();" /> 
+        <img class="modal-content centered" id="img01" onclick="popFunction();" />
         <a class="carousel-control-prev" id="ccp" onclick="previousImage();">
             <span class="carousel-control-prev-icon"></span>
         </a>
@@ -184,9 +195,10 @@
 
     <script>
 
-        
+
         // Get the modal into a variable
         var modal = document.getElementById('galleryModal');
+        var sidebar = document.getElementById('mySidebar');
         var catbounds = [7, 8, 50, 0, 9, 11, 6, 6, 18, 9, 30, 16, 6, 12, 6, 4, 41, 32]; //16l
         var catnames = ["bbq", "cabana", "construction", "decks", "driveways", "fence", "fire", "fountain", "garden", "patio", "pool", "renovations", "retainingwall", "spa", "stairs", "stonework", "team", "exampleWork"];
 
@@ -198,10 +210,14 @@
         var captionText = document.getElementById("caption");
 
         //clicking on blown up image closes modal
+
+        function pushSidebar() {
+            sidebar.style.display = "block";
+        }
         function popFunction() {
             modal.style.display = "none";
         }
-        document.onkeydown = function(event) {
+        document.onkeydown = function (event) {
             switch (event.keyCode) {
                 case 37:
                     if (modal.style.display == "block") {
@@ -681,6 +697,7 @@
             }
         }
         function filter(title, images) {
+            sidebar.style.display = "none";
             if (currentTitle != title) {
                 document.getElementById(title).style.display = "block";
                 document.getElementById(images).style.display = "block";
@@ -700,7 +717,7 @@
 
         window.onload = populatebbq(), populatecabana(), populatedriveways(), populatefence(), populatefountain(), populategarden(), populatepatio(), populatepool(), populaterenovations(), populateretainingwall(), populatespa(), populatestairs(), populatestonework(), populateexampleWork(), populateteam(), populatefire(), populateconstruction(), populatedecks(), filterout();
     </script>
-<!--- Footer -->
+    <!--- Footer -->
     <footer>
         <div class="container-fluid">
             <div class="row text-center">

@@ -173,7 +173,7 @@ hr.light-100 {
     left: 0;
     overflow-x: hidden;
     padding-top: 113px;
-    transition: 0.5s;
+    display: none;
 }
 
     .sidebar a:hover {
