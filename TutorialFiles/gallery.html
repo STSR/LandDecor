@@ -95,9 +95,6 @@
                         <button class="btn btn-light" type="button" onclick="filter('stairs-t', 'stairs');">
                             Stairs
                         </button>
-                        <button class="btn btn-light" type="button" onclick="filter('stonework-t', 'stonework')">
-                            Stonework
-                        </button>
                         <button class="btn btn-light" type="button" onclick="filter('team-t', 'team')">
                             The Team
                         </button>
@@ -158,9 +155,6 @@
             <h2 id="stairs-t" class="gal galsection stairs">Stairs</h2>
             <div id="stairs" class="gal stairs galcon">
             </div>
-            <h2 id="stonework-t" class="gal galsection stonework">Stonework</h2>
-            <div id="stonework" class="gal stonework galcon">
-            </div>
             <h2 id="team-t" class="gal galsection team">The Team</h2>
             <div id="team" class="gal team galcon">
             </div>
@@ -186,8 +180,8 @@
         // Get the modal into a variable
         var modal = document.getElementById('galleryModal');
         var sidebar = document.getElementById('mySidebar');
-        var catbounds = [7, 8, 50, 0, 9, 11, 6, 6, 18, 9, 30, 16, 6, 12, 6, 4, 41, 32]; //16l
-        var catnames = ["bbq", "cabana", "construction", "decks", "driveways", "fence", "fire", "fountain", "garden", "patio", "pool", "renovations", "retainingwall", "spa", "stairs", "stonework", "team", "exampleWork"];
+        var catbounds = [7, 8, 50, 4, 9, 11, 6, 6, 18, 9, 30, 16, 6, 12, 6, 41, 32]; //15l
+        var catnames = ["bbq", "cabana", "construction", "decks", "driveways", "fence", "fire", "fountain", "garden", "patio", "pool", "renovations", "retainingwall", "spa", "stairs", "team", "exampleWork"];
 
         //Set the first visible set to a var
         var currentTitle = 'exampleWork-t';
@@ -281,7 +275,7 @@
         function populatecabana() {
             var container = document.getElementById('cabana');
             var i = 1;
-            while (i < 9) {
+            while (i < 11) {
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/cabana/' + i + '.jpg';
                 img.alt = "Cabana";
@@ -305,12 +299,12 @@
         function populatedecks() {
             var container = document.getElementById('decks');
             var i = 1;
-            while (i < 1) { //needs number of deck images
+            while (i < 5) { //needs number of deck images
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/decks/' + i + '.jpg';
                 img.alt = "Decks";
                 img.setAttribute('data-index', i);
-                img.setAttribute('data-catNum', '2');
+                img.setAttribute('data-catNum', '3');
                 img.className = 'galpics';
                 img.style.maxWidth = '200px';
                 img.addEventListener('click', function () {
@@ -334,7 +328,7 @@
                 img.src = 'imgs/gallery/driveways/' + i + '.jpg';
                 img.alt = "Driveway";
                 img.setAttribute('data-index', i);
-                img.setAttribute('data-catNum', '3');
+                img.setAttribute('data-catNum', '4');
                 img.className = 'galpics';
                 img.style.maxWidth = '200px';
                 img.addEventListener('click', function () {
@@ -358,7 +352,7 @@
                 img.src = 'imgs/gallery/fence/' + i + '.jpg';
                 img.alt = "Fence";
                 img.setAttribute('data-index', i);
-                img.setAttribute('data-catNum', '4');
+                img.setAttribute('data-catNum', '5');
                 img.className = 'galpics';
                 img.style.maxWidth = '200px';
                 img.addEventListener('click', function () {
@@ -382,7 +376,7 @@
                 img.src = 'imgs/gallery/fountain/' + i + '.jpg';
                 img.alt = "Fountain";
                 img.setAttribute('data-index', i);
-                img.setAttribute('data-catNum', '6');
+                img.setAttribute('data-catNum', '7');
                 img.className = 'galpics';
                 img.style.maxWidth = '200px';
                 img.addEventListener('click', function () {
@@ -401,12 +395,12 @@
         function populategarden() {
             var container = document.getElementById('garden');
             var i = 1;
-            while (i < 19) {
+            while (i < 18) {
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/garden/' + i + '.jpg';
                 img.alt = "Garden";
                 img.setAttribute('data-index', i);
-                img.setAttribute('data-catNum', '7');
+                img.setAttribute('data-catNum', '8');
                 img.className = 'galpics';
                 img.style.maxWidth = '200px';
                 img.addEventListener('click', function () {
@@ -425,12 +419,12 @@
         function populatepatio() {
             var container = document.getElementById('patio');
             var i = 1;
-            while (i < 10) {
+            while (i < 7) {
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/patio/' + i + '.jpg';
                 img.alt = "Patio";
                 img.setAttribute('data-index', i);
-                img.setAttribute('data-catNum', '8');
+                img.setAttribute('data-catNum', '9');
                 img.className = 'galpics';
                 img.style.maxWidth = '200px';
                 img.addEventListener('click', function () {
@@ -449,12 +443,12 @@
         function populatepool() {
             var container = document.getElementById('pool');
             var i = 1;
-            while (i < 31) {
+            while (i < 28) {
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/pool/' + i + '.jpg';
                 img.alt = "Pool";
                 img.setAttribute('data-index', i);
-                img.setAttribute('data-catNum', '9');
+                img.setAttribute('data-catNum', '10');
                 img.className = 'galpics';
                 img.style.maxWidth = '200px';
                 img.addEventListener('click', function () {
@@ -473,12 +467,12 @@
         function populaterenovations() {
             var container = document.getElementById('renovations');
             var i = 1;
-            while (i < 17) {
+            while (i < 16) {
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/renovations/' + i + '.jpg';
                 img.alt = "Renovations";
                 img.setAttribute('data-index', i);
-                img.setAttribute('data-catNum', '10');
+                img.setAttribute('data-catNum', '11');
                 img.className = 'galpics';
                 img.style.maxWidth = '200px';
                 img.addEventListener('click', function () {
@@ -502,7 +496,7 @@
                 img.src = 'imgs/gallery/retainingwall/' + i + '.jpg';
                 img.alt = "Retaining Wall";
                 img.setAttribute('data-index', i);
-                img.setAttribute('data-catNum', '11');
+                img.setAttribute('data-catNum', '12');
                 img.className = 'galpics';
                 img.style.maxWidth = '200px';
                 img.addEventListener('click', function () {
@@ -526,7 +520,7 @@
                 img.src = 'imgs/gallery/spa/' + i + '.jpg';
                 img.alt = "Spa";
                 img.setAttribute('data-index', i);
-                img.setAttribute('data-catNum', '12');
+                img.setAttribute('data-catNum', '13');
                 img.className = 'galpics';
                 img.style.maxWidth = '200px';
                 img.addEventListener('click', function () {
@@ -545,34 +539,10 @@
         function populatestairs() {
             var container = document.getElementById('stairs');
             var i = 1;
-            while (i < 7) {
+            while (i < 10) {
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/stairs/' + i + '.jpg';
                 img.alt = "Stairs";
-                img.setAttribute('data-index', i);
-                img.setAttribute('data-catNum', '13');
-                img.className = 'galpics';
-                img.style.maxWidth = '200px';
-                img.addEventListener('click', function () {
-                    var index = this.getAttribute('data-index');
-                    var catNum = this.getAttribute('data-catNum');
-                    modal.style.display = "block";
-                    modalImg.setAttribute("data-index", index);
-                    modalImg.setAttribute("data-catNum", catNum);
-                    modalImg.src = this.src;
-                    captionText.innerHTML = imgs.alt;
-                });
-                container.appendChild(img);
-                i++;
-            }
-        }
-        function populatestonework() {
-            var container = document.getElementById('stonework');
-            var i = 1;
-            while (i < 5) {
-                var img = document.createElement('img');
-                img.src = 'imgs/gallery/stonework/' + i + '.jpg';
-                img.alt = "Stonework";
                 img.setAttribute('data-index', i);
                 img.setAttribute('data-catNum', '14');
                 img.className = 'galpics';
@@ -593,7 +563,7 @@
         function populateconstruction() {
             var container = document.getElementById('construction');
             var i = 1;
-            while (i < 51) {
+            while (i < 52) {
                 var img = document.createElement('img');
                 img.src = 'imgs/gallery/construction/' + i + '.jpg';
                 img.alt = "Under Construction";
@@ -622,7 +592,7 @@
                 img.src = 'imgs/gallery/fire/' + i + '.jpg';
                 img.alt = "Fire Features";
                 img.setAttribute('data-index', i);
-                img.setAttribute('data-catNum', '5');
+                img.setAttribute('data-catNum', '6');
                 img.className = 'galpics';
                 img.style.maxWidth = '200px';
                 img.addEventListener('click', function () {
@@ -705,7 +675,7 @@
             }
         }
 
-        window.onload = populatebbq(), populatecabana(), populatedriveways(), populatefence(), populatefountain(), populategarden(), populatepatio(), populatepool(), populaterenovations(), populateretainingwall(), populatespa(), populatestairs(), populatestonework(), populateexampleWork(), populateteam(), populatefire(), populateconstruction(), populatedecks(), filterout();
+        window.onload = populatebbq(), populatecabana(), populatedriveways(), populatefence(), populatefountain(), populategarden(), populatepatio(), populatepool(), populaterenovations(), populateretainingwall(), populatespa(), populatestairs(), populateexampleWork(), populateteam(), populatefire(), populateconstruction(), populatedecks(), filterout();
     </script>
     <!--- Footer -->
     <footer>
